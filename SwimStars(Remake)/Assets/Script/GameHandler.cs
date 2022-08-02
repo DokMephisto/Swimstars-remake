@@ -4,10 +4,10 @@ using UnityEngine;
 using CodeMonkey;
 using CodeMonkey.Utils;
 
-public class GameHandler : MonoBehaviour
-{
+public class GameHandler : MonoBehaviour{
     int count = 0;
     GameObject mine;
+    float flo = 0; 
 
 
     // Start is called before the first frame update
