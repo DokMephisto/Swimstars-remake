@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    private void CreateMine(float height, float xPosition) {
+    private void CreateMine(float height, float xPosition){
 
-
+        
     }
 }
