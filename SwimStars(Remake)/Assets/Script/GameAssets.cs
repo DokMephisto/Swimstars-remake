@@ -20,6 +20,6 @@ public class GameAssets : MonoBehaviour
         instance = this;
     }
 
-    public Sprite mineSprite;
+    //public Sprite mineSprite;
     public Transform pfmine;
 }

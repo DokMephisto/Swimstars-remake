@@ -15,8 +15,8 @@ public class GameHandler : MonoBehaviour{
     {
         Debug.Log("GameHandler.Start");
 
-        mine = new GameObject("mine", typeof(SpriteRenderer));
-        mine.GetComponent<SpriteRenderer>().sprite = GameAssets.GetInstance().mineSprite;
+       // mine = new GameObject("mine", typeof(SpriteRenderer));
+       // mine.GetComponent<SpriteRenderer>().sprite = GameAssets.GetInstance().mineSprite;
         
     }
 

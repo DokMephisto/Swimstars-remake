@@ -9,10 +9,12 @@ public class Shark : MonoBehaviour
 {
     private new Rigidbody2D rigidbody2D;
     private const float Jump_Amount = 100f;
+    Animation anim;
 
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
@@ -23,12 +25,13 @@ public class Shark : MonoBehaviour
             Jump();
 
         }
-        GetComponent<Animator>().Play("SharkSwim");
+        
 
 
 
 
     }
+
     private void Jump()
         {
         rigidbody2D.velocity = Vector2.up * Jump_Amount;
