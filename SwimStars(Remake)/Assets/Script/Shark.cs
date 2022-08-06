@@ -23,7 +23,9 @@ public class Shark : MonoBehaviour
             Jump();
 
         }
-        
+        GetComponent<Animator>().Play("SharkSwim");
+
+
 
 
     }
