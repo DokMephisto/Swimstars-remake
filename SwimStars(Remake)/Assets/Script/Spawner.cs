@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mineSpawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
 
     public GameObject prefab;
@@ -29,8 +29,8 @@ public class mineSpawner : MonoBehaviour
 
     private void Spawn() {
 
-        GameObject mines = Instantiate(prefab, transform.position, Quaternion.identity);
-        mines.transform.position += Vector3.up * Random.Range(minHeight, maxheight);
+        GameObject spawnedObj = Instantiate(prefab, transform.position, Quaternion.identity);
+        spawnedObj.transform.position += Vector3.up * Random.Range(minHeight, maxheight);
 
     }
 
