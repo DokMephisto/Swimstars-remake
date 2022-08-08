@@ -1,45 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using CodeMonkey;
-using CodeMonkey.Utils;
-
 
 public class Shark : MonoBehaviour
 {
-    private new Rigidbody2D rigidbody2D;
-    private const float Jump_Amount = 100f;
-    Animation anim;
 
-    private void Awake()
-    {
-        rigidbody2D = GetComponent<Rigidbody2D>();
-        
-    }
+    private SpriteRenderer shark;
+    public Sprite[] sharks;
+    private int sharkIndex; 
 
-    // Update is called once per frame
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-        {
-            Jump();
-
-        }
-        
+    private Vector3 direction;
+    public float gravity = -9.8f;
+    public float antiGravity = 5f;
 
 
+    private void Awake() {
+
+        shark = GetComponent<SpriteRenderer>();
 
 
     }
 
-    private void Jump()
-        {
-        rigidbody2D.velocity = Vector2.up * Jump_Amount;
+    private void Start() {
+
+        InvokeRepeating(nameof(AnimateSprite), .05f, .05f);
+
+
+    }
+
+    private void Update() {
+        
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) {
+            direction = Vector3.up * antiGravity;
 
         }
 
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        CMDebug.TextPopupMouse("YER FUCKED!"); 
+        direction.y += gravity * Time.deltaTime;
+        transform.position += direction * Time.deltaTime;
+    }
+
+    private void AnimateSprite() {
+
+        sharkIndex++;
+        
+        if (sharkIndex >= sharks.Length) {
+
+            sharkIndex = 0;
+        }
+
+        shark.sprite = sharks[sharkIndex];
+
+
     }
 }
