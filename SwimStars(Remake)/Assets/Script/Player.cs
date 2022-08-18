@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Player : MonoBehaviour
     private Vector3 direction;
     public float gravity = -9.8f;
     public float antiGravity = 5f;
+    public float fps = 0f;
 
 
     private void Awake() {
@@ -21,7 +23,7 @@ public class Player : MonoBehaviour
 
     private void Start() {
 
-        InvokeRepeating(nameof(AnimateSprite), .05f, .05f);
+        InvokeRepeating(nameof(AnimateSprite), fps, fps);
 
 
     }
@@ -55,10 +57,21 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "Obstacle") {
 
             FindObjectOfType<Gamemanager>().GameOver();
+            
+
         } else if (other.gameObject.tag == "Score") {
 
             FindObjectOfType<Gamemanager>().IncreaseScore();
         }
+
+
+
+    }
+
+    public void MoveToScene(int sceneID) {
+
+
+        SceneManager.LoadScene(sceneID);
 
     }
 }

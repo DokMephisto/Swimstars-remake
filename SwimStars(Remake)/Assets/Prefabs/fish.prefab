@@ -96,7 +96,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69cb2f5644c3b494892e5b6607bc97f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
+  speed: 35
+  sprites:
+  - {fileID: 21300000, guid: 2b30096c8696aed4e9497c5c231a9f52, type: 3}
+  - {fileID: 21300000, guid: a9e3b3dfffe61d04fb3637b613fa249a, type: 3}
+  - {fileID: 21300000, guid: bda36f5e90458a64181c4a20dc3443a4, type: 3}
+  - {fileID: 21300000, guid: 0a062f5b6fc59b24ab1142b4af8b02e0, type: 3}
+  - {fileID: 21300000, guid: 4f5f71fb34c9c1244a7a8424f3ee67b1, type: 3}
+  - {fileID: 21300000, guid: a159f163175aba6429538f1bb932ae94, type: 3}
+  - {fileID: 21300000, guid: 6319407eadaad1645b3b8a5860d5feb8, type: 3}
+  - {fileID: 21300000, guid: de77aab8af487b44e914e35287a9ed81, type: 3}
+  - {fileID: 21300000, guid: a0ef55a6312daac4196770f44316f0b6, type: 3}
+  - {fileID: 21300000, guid: 212099ecc10129f4a906e68cf239c284, type: 3}
+  - {fileID: 21300000, guid: 0a4b11aad110fe3478066252ae45f04c, type: 3}
+  - {fileID: 21300000, guid: ac4e6f68eec5e574eb055f81a53cf2be, type: 3}
 --- !u!70 &8683797743482744576
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
